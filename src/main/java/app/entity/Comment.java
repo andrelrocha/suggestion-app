@@ -38,16 +38,15 @@ public class Comment implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="fk_suggestion", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
+    @Column(name = "fk_suggestion", nullable = false, unique = false, insertable=true, updatable=true)
         
-        private Suggestion suggestion;
+        private java.lang.String suggestionId;
 
 
     /**
     * @generated
     */
-    @Column(name = "userId", nullable = false, unique = false, insertable=true, updatable=true)
+    @Column(name = "fk_userId", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String userId;
 
@@ -86,21 +85,21 @@ public class Comment implements Serializable {
         return this;
     }
     /**
-    * Obtém suggestion
-    * return suggestion
+    * Obtém suggestionId
+    * return suggestionId
     * @generated
     */
-    public Suggestion getSuggestion() {
-        return this.suggestion;
+    public java.lang.String getSuggestionId() {
+        return this.suggestionId;
     }
 
     /**
-    * Define suggestion
-    * @param suggestion suggestion
+    * Define suggestionId
+    * @param suggestionId suggestionId
     * @generated
     */
-    public Comment setSuggestion(Suggestion suggestion) {
-        this.suggestion = suggestion;
+    public Comment setSuggestionId(java.lang.String suggestionId) {
+        this.suggestionId = suggestionId;
         return this;
     }
     /**

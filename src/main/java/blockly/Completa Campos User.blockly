@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="src/main/webapp/views/logged/suggestion.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Completa User " ruleName="Completa User " ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="514.9" scrolly="-68.39999999999986" target="Anb:u5+^,0vLkL9QIqn5"/>
-  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" rest-consumes="*/*" rest-method="GET" rest-path="/api/cronapi/rest/CompletaUser:getUserByUserLogado" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-382" y="143">
-    <field customattributes="" name="NAME">getUserByUserLogado</field>
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="src/main/webapp/views/logged/comment.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Completa User Comment" ruleName="Completa User Comment" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
+  <metadata scale="1" scrollx="480.89999999999986" scrolly="7.000000000000057" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" rest-consumes="*/*" rest-method="GET" rest-path="/api/cronapi/rest/CompletaUserComment:fillUserId" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+    <field customattributes="" name="NAME">fillUserId</field>
     <statement name="STACK">
       <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[uIg:6xwmD/W94=-9dnr" multilayer="true" namespace="cronapi.screen.setVisibility" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EDefinir%20visibilidade%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20definir%20visibilidade%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Vis%C3%ADvel?%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.setVisibility','cronapi.screen.setVisibility')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
         <mutation name="{{cronapi.screen.setVisibility}}" return-raw-type="undefined">
@@ -78,11 +78,11 @@
                 </mutation>
                 <value name="ARG0">
                   <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="tzCCf]/h?vJZKYIA?87F" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
-                    <field customattributes="" name="SELECT">Suggestion.active.userId</field>
+                    <field customattributes="" name="SELECT">Comment.active.userId</field>
                   </block>
                 </value>
                 <value name="ARG1">
-                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%PVVA$n%nLbY[joPai)p" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%PVVA$n%nLbY[joPai)p" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                     <field customattributes="" name="TEXT"/>
                   </shadow>
                   <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="M/bL}L96y0S3Sheta)iX" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">

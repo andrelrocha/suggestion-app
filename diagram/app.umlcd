@@ -47,6 +47,7 @@
       "chkApi": false,
       "dataSource": "jdbc/main",
       "disableCache": false,
+      "generationType": "drop-and-create-tables",
       "id": "paperCell",
       "methods": [],
       "namespace": "app",
@@ -80,7 +81,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
@@ -231,7 +232,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
@@ -423,6 +424,9 @@
         "error:java.lang.String"
       ],
       "attrs": {
+        ".": {
+          "display": "none"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -966,7 +970,7 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
-        "suggestion:Suggestion",
+        "suggestionId:java.lang.String",
         "userId:java.lang.String",
         "text:java.lang.String"
       ],
@@ -984,13 +988,13 @@
         ".uml-class-attrs-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* id\nsuggestion\nuserId\ntext\n"
+          "text": "* id\nsuggestionId\nuserId\ntext\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 143,
-          "text": "Texto\nSuggestion\nTexto\nTexto\n"
+          "ref-x": 165,
+          "text": "Texto\nTexto\nTexto\nTexto\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
@@ -1055,14 +1059,14 @@
           "regionAWS": ""
         },
         {
-          "name": "suggestion",
-          "type": "Suggestion",
+          "name": "suggestionId",
+          "type": "java.lang.String",
           "dbName": "fk_suggestion",
           "dbLength": "",
           "dbPrecision": "",
           "dbScale": "",
           "dbDefaultValue": "",
-          "label": "Suggestion",
+          "label": "Suggestion Id",
           "mask": "",
           "isPrimaryKey": false,
           "isUniqueKey": false,
@@ -1093,7 +1097,7 @@
         {
           "name": "userId",
           "type": "java.lang.String",
-          "dbName": "userId",
+          "dbName": "fk_userId",
           "dbLength": "",
           "dbPrecision": "",
           "dbScale": "",
@@ -1180,7 +1184,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 140,
-        "width": 213
+        "width": 204
       },
       "swagger": false,
       "tableName": "",
@@ -1201,6 +1205,9 @@
         "appVersion:java.lang.String"
       ],
       "attrs": {
+        ".": {
+          "display": "none"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -1535,7 +1542,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
@@ -1810,7 +1817,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
@@ -2143,7 +2150,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
@@ -2353,7 +2360,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
@@ -3602,7 +3609,7 @@
         "userName"
       ],
       "position": {
-        "x": 984,
+        "x": 986,
         "y": 38
       },
       "primaryKeys": [
@@ -3641,7 +3648,7 @@
       "tableName": "USER",
       "type": "uml.Class",
       "uniqueKeys": [],
-      "z": 24
+      "z": 33
     },
     {
       "angle": 0,
@@ -3652,7 +3659,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
@@ -3862,7 +3869,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
@@ -4081,7 +4088,7 @@
       ],
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
@@ -4538,7 +4545,7 @@
       "associationType": "Association",
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4585,7 +4592,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4685,7 +4692,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4732,7 +4739,7 @@
       "associationType": "Association",
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4789,7 +4796,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4894,7 +4901,7 @@
       "associationType": "Association",
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4942,7 +4949,7 @@
       "associationType": "Association",
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4989,7 +4996,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -5036,7 +5043,7 @@
       "associationType": "Association",
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -5083,7 +5090,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -5129,7 +5136,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -5207,7 +5214,7 @@
       "name": null,
       "queries": [],
       "relationFields": [
-        "suggestion:target"
+        "suggestionId:target"
       ],
       "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
       "source": {
@@ -5224,7 +5231,7 @@
       "associationType": "Association",
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -5271,7 +5278,7 @@
     {
       "attrs": {
         ".": {
-          "display": "normal"
+          "display": "none"
         },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -5315,7 +5322,7 @@
       "z": "4"
     }
   ],
-  "selectedGroup": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
+  "selectedGroup": "57db894a-4102-483e-b7f0-dafc7e8ec9b9",
   "groups": [
     {
       "name": "App",
@@ -5327,13 +5334,6 @@
       ],
       "groupPositions": [
         {
-          "idCell": "90dcfd7a-b75c-468e-b9d7-9b20ddd1e5b6",
-          "position": {
-            "x": 432,
-            "y": 160
-          }
-        },
-        {
           "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
           "position": {
             "x": 452,
@@ -5341,10 +5341,10 @@
           }
         },
         {
-          "idCell": "64d403e5-c641-42f0-aa62-4ff1a9d01e90",
+          "idCell": "90dcfd7a-b75c-468e-b9d7-9b20ddd1e5b6",
           "position": {
-            "x": 331,
-            "y": 471
+            "x": 432,
+            "y": 160
           }
         },
         {
@@ -5352,6 +5352,13 @@
           "position": {
             "x": 986,
             "y": 38
+          }
+        },
+        {
+          "idCell": "64d403e5-c641-42f0-aa62-4ff1a9d01e90",
+          "position": {
+            "x": 331,
+            "y": 471
           }
         }
       ]
@@ -5383,38 +5390,10 @@
       ],
       "groupPositions": [
         {
-          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "idCell": "1ec6293b-1b11-4bbd-9b22-cb612a4de6ea",
           "position": {
-            "x": 656,
-            "y": 312
-          }
-        },
-        {
-          "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
-          "position": {
-            "x": 452,
-            "y": 432
-          }
-        },
-        {
-          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
-          "position": {
-            "x": 684,
-            "y": 26
-          }
-        },
-        {
-          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
-          "position": {
-            "x": 100,
-            "y": 34
-          }
-        },
-        {
-          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
-          "position": {
-            "x": 984,
-            "y": 38
+            "x": 148,
+            "y": 306
           }
         },
         {
@@ -5425,17 +5404,17 @@
           }
         },
         {
-          "idCell": "1ec6293b-1b11-4bbd-9b22-cb612a4de6ea",
+          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
           "position": {
-            "x": 148,
-            "y": 306
+            "x": 1106,
+            "y": 406
           }
         },
         {
-          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
           "position": {
-            "x": 144,
-            "y": 530
+            "x": 984,
+            "y": 38
           }
         },
         {
@@ -5446,24 +5425,45 @@
           }
         },
         {
-          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
-          "position": {
-            "x": 418,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
-          "position": {
-            "x": 1106,
-            "y": 406
-          }
-        },
-        {
           "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
           "position": {
             "x": 668,
             "y": 594
+          }
+        },
+        {
+          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
+          "position": {
+            "x": 404,
+            "y": 342
+          }
+        },
+        {
+          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "position": {
+            "x": 656,
+            "y": 312
+          }
+        },
+        {
+          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
+          "position": {
+            "x": 684,
+            "y": 26
+          }
+        },
+        {
+          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
+          "position": {
+            "x": 144,
+            "y": 530
+          }
+        },
+        {
+          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
+          "position": {
+            "x": 100,
+            "y": 34
           }
         },
         {
@@ -5474,13 +5474,6 @@
           }
         },
         {
-          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
-          "position": {
-            "x": 940,
-            "y": 594
-          }
-        },
-        {
           "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
           "position": {
             "x": 70,
@@ -5488,10 +5481,24 @@
           }
         },
         {
-          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
+          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
           "position": {
-            "x": 404,
-            "y": 342
+            "x": 418,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
+          "position": {
+            "x": 452,
+            "y": 432
+          }
+        },
+        {
+          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "position": {
+            "x": 940,
+            "y": 594
           }
         }
       ]
