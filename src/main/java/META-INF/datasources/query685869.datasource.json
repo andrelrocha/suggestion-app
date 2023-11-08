@@ -1,0 +1,277 @@
+{
+  "customId": "getUserLogged",
+  "queryName": "getLoggedUser",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "User",
+  "entityFullName": "app.entity.User",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "User",
+        "namespace": "app.entity.User",
+        "dataSourceOptions": {
+          "id": "app.User",
+          "customId": "User",
+          "customQueryName": "app.User",
+          "paramValues": [],
+          "entityFullName": "app.entity.User",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "accessFailedCount",
+              "type": "Int32",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "email",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "emailConfirmed",
+              "type": "Boolean",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "lockoutEnabled",
+              "type": "Boolean",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "lockoutEnd",
+              "type": "DateTime",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "normalizedEmail",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "normalizedUserName",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "password",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "phoneNumber",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "phoneNumberConfirmed",
+              "type": "Boolean",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "securityStamp",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "twoFactorEnabled",
+              "type": "Boolean",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "userName",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "theme",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "picture",
+              "type": "Binary",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "key": true
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "User",
+          "fullName": "app.entity.User",
+          "labelName": "app.entity.User (User)"
+        },
+        "alias": "u"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "u",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "u.normalizedUserName",
+          "field": "u.normalizedUserName",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":normalizedUserName",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "normalizedUserName",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "accessFailedCount": null,
+    "email": null,
+    "emailConfirmed": null,
+    "lockoutEnabled": null,
+    "lockoutEnd": null,
+    "name": null,
+    "normalizedEmail": null,
+    "normalizedUserName": null,
+    "password": null,
+    "phoneNumber": null,
+    "phoneNumberConfirmed": null,
+    "securityStamp": null,
+    "twoFactorEnabled": null,
+    "userName": null,
+    "theme": null,
+    "picture": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "accessFailedCount": null,
+    "email": null,
+    "emailConfirmed": null,
+    "lockoutEnabled": null,
+    "lockoutEnd": null,
+    "name": null,
+    "normalizedEmail": null,
+    "normalizedUserName": null,
+    "password": null,
+    "phoneNumber": null,
+    "phoneNumberConfirmed": null,
+    "securityStamp": null,
+    "twoFactorEnabled": null,
+    "userName": null,
+    "theme": null,
+    "picture": null
+  },
+  "security": {
+    "id": null,
+    "accessFailedCount": null,
+    "email": null,
+    "emailConfirmed": null,
+    "lockoutEnabled": null,
+    "lockoutEnd": null,
+    "name": null,
+    "normalizedEmail": null,
+    "normalizedUserName": null,
+    "password": null,
+    "phoneNumber": null,
+    "phoneNumberConfirmed": null,
+    "securityStamp": null,
+    "twoFactorEnabled": null,
+    "userName": null,
+    "theme": null,
+    "picture": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query685869/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}

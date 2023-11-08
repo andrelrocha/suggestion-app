@@ -73,18 +73,9 @@ public class Suggestion implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="fk_user", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
+    @Column(name = "fk_user", nullable = false, unique = false, insertable=true, updatable=true)
         
-        private User user;
-
-
-    /**
-    * @generated
-    */
-    @Column(name = "creator", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.String creator;
+        private java.lang.String userId;
 
 
     /**
@@ -185,39 +176,21 @@ public class Suggestion implements Serializable {
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém userId
+    * return userId
     * @generated
     */
-    public User getUser() {
-        return this.user;
+    public java.lang.String getUserId() {
+        return this.userId;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define userId
+    * @param userId userId
     * @generated
     */
-    public Suggestion setUser(User user) {
-        this.user = user;
-        return this;
-    }
-    /**
-    * Obtém creator
-    * return creator
-    * @generated
-    */
-    public java.lang.String getCreator() {
-        return this.creator;
-    }
-
-    /**
-    * Define creator
-    * @param creator creator
-    * @generated
-    */
-    public Suggestion setCreator(java.lang.String creator) {
-        this.creator = creator;
+    public Suggestion setUserId(java.lang.String userId) {
+        this.userId = userId;
         return this;
     }
 

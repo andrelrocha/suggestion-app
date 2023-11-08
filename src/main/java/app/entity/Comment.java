@@ -39,7 +39,7 @@ public class Comment implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_suggestion", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @JoinColumn(name="fk_suggestion", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Suggestion suggestion;
 
@@ -47,10 +47,17 @@ public class Comment implements Serializable {
     /**
     * @generated
     */
-    @OneToOne
-    @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @Column(name = "userId", nullable = false, unique = false, insertable=true, updatable=true)
         
-        private User user;
+        private java.lang.String userId;
+
+
+    /**
+    * @generated
+    */
+    @Column(name = "text", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String text;
 
 
     /**
@@ -97,21 +104,39 @@ public class Comment implements Serializable {
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém userId
+    * return userId
     * @generated
     */
-    public User getUser() {
-        return this.user;
+    public java.lang.String getUserId() {
+        return this.userId;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define userId
+    * @param userId userId
     * @generated
     */
-    public Comment setUser(User user) {
-        this.user = user;
+    public Comment setUserId(java.lang.String userId) {
+        this.userId = userId;
+        return this;
+    }
+    /**
+    * Obtém text
+    * return text
+    * @generated
+    */
+    public java.lang.String getText() {
+        return this.text;
+    }
+
+    /**
+    * Define text
+    * @param text text
+    * @generated
+    */
+    public Comment setText(java.lang.String text) {
+        this.text = text;
         return this;
     }
 

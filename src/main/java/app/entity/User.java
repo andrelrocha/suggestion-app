@@ -19,7 +19,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @javax.persistence.Entity
 @javax.persistence.Table(name = "\"USER\"")
 @XmlRootElement
-@CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
+@CronappSecurity(post = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.User")
 public class User implements Serializable {
     /**
