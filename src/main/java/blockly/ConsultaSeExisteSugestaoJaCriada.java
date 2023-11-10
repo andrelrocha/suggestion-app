@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 08/11/2023, 14:15:10
+ * @since 10/11/2023, 12:52:47
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/ConsultaSeExisteSugestaoJaCriada:consultarSugestaoByName", method = RequestMethod.GET, consumes = "*/*")
@@ -58,7 +58,9 @@ public static Var consultarSugestaoByName() throws Exception {
         cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.openUrl"),
         Var.valueOf(
         cronapi.util.Operations.getBaseUrl().getObjectAsString() +
-        Var.valueOf("#/home/logged/comment").getObjectAsString()), Var.VAR_NULL,
+        Var.valueOf("#/home/logged/comment?suggestionId=").getObjectAsString() +
+        cronapi.database.Operations.getField(existeSugestao,
+        Var.valueOf("this[0].id")).getObjectAsString()), Var.VAR_NULL,
         Var.VAR_NULL,
         Var.VAR_NULL);
     }

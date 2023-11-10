@@ -13,6 +13,7 @@
     "@cronapp/framework-core": "2.9.6-SP.25",
     "cronapi-js": "2.9.6-SP.25",
     "cronapp-common-js": "2.9.6-SP.25",
-    "cronapp-framework-mobile-js": "2.9.6-SP.25"
+    "cronapp-framework-mobile-js": "2.9.6-SP.25",
+    "cronapp-lib-js": "2.9.6-SP.25"
   }
 }

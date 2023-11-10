@@ -60,10 +60,10 @@
             <div class="crn-fieldset" ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 
 
-                    <div class="component-holder ng-scope" data-component="crn-textarea" id="nomeSuggestion"><div class="form-group"><label for="textArea6110">Nome da sugestão:</label><textarea id="textArea6110" ng-model="vars.suggestionName" maxlength="100" style="resize:none" resize="resize:none;" class="form-control k-textbox" rows="1" ng-mousemove="cronapi.server('blockly.CompletaCamposComment.completarCampos').run()"></textarea></div></div><div data-component="crn-textinput" id="crn-textinput-text-72704" class="">
+                    <div class="component-holder ng-scope" data-component="crn-textarea" id="nomeSuggestion"><div class="form-group"><label for="textArea6110">Nome da sugestão:</label><textarea id="textArea6110" ng-model="vars.suggestionName" maxlength="100" style="resize:none" resize="resize:none;" class="form-control k-textbox" rows="1" ng-mousemove="" ng-disabled="true"></textarea></div></div><div data-component="crn-textinput" id="crn-textinput-text-72704" class="">
                         <div class="form-group">
                                 <label for="textinput-text" class="">Text</label>
-                                <input type="text" ng-model="Comment.active.text" class="form-control k-textbox" id="textinput-text" placeholder="Text" mask="" mask-placeholder="" ng-required="true" ng-mousemove="cronapi.server('blockly.CompletaUserComment.fillUserId').run()">
+                                <input type="text" ng-model="Comment.active.text" class="form-control k-textbox" id="textinput-text" placeholder="Text" mask="" mask-placeholder="" ng-required="true" ng-mousemove="" ng-init="cronapi.server('blockly.CompletaCamposComment.completarCampos').run()">
                         </div>
                     </div><div data-component="crn-textinput" id="suggestionId" class="">
                         <div class="form-group">

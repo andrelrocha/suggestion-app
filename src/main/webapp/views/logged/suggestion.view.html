@@ -63,7 +63,7 @@
                     <div data-component="crn-textinput" id="crn-textinput-suggestionName-41813" class="">
                         <div class="form-group">
                                 <label for="textinput-suggestionName" class="">Suggestion Name</label>
-                                <input type="text" ng-model="Suggestion.active.suggestionName" class="form-control k-textbox" id="textinput-suggestionName" placeholder="Suggestion Name" mask="" mask-placeholder="" ng-required="true" ng-mouseenter="cronapi.server('blockly.CompletaUser.getUserByUserLogado').run()" ng-blur="" ng-click="" ng-init="">
+                                <input type="text" ng-model="Suggestion.active.suggestionName" class="form-control k-textbox" id="textinput-suggestionName" placeholder="Suggestion Name" mask="" mask-placeholder="" ng-required="true" ng-mouseenter="" ng-blur="" ng-click="" ng-init="" ng-mousemove="cronapi.server('blockly.CompletaCamposUser.fillUserId').run()">
                         </div>
                     </div>
 
