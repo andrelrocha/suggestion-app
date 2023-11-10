@@ -14,7 +14,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 10/11/2023, 12:49:16
+ * @since 10/11/2023, 13:07:09
  *
  */
 public static void completarCampos() throws Exception {
@@ -40,7 +40,7 @@ public static void completarCampos() throws Exception {
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 10/11/2023, 12:49:16
+ * @since 10/11/2023, 13:07:09
  *
  */
 public static Var fillSuggestionId() throws Exception {
@@ -49,16 +49,13 @@ public static Var fillSuggestionId() throws Exception {
    private Var suggestionId = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    System.out.println(
-    Var.valueOf("CHAMOU fill suggestion").getObjectAsString());
     suggestionId =
     Var.valueOf(
     cronapi.screen.Operations.getValueOfField(
     Var.valueOf("params.suggestionId")).getObjectAsString());
-    System.out.println(suggestionId.getObjectAsString());
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.setVisibility"),
     Var.valueOf("suggestionId"),
-    Var.valueOf("true"));
+    Var.valueOf("false"));
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
     Var.valueOf("Comment.active.suggestionId"), suggestionId);
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
@@ -74,7 +71,7 @@ public static Var fillSuggestionId() throws Exception {
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 10/11/2023, 12:49:16
+ * @since 10/11/2023, 13:07:09
  *
  */
 public static Var getUserByUserLogado() throws Exception {
@@ -85,7 +82,7 @@ public static Var getUserByUserLogado() throws Exception {
    public Var call() throws Exception {
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.setVisibility"),
     Var.valueOf("userId"),
-    Var.valueOf("true"));
+    Var.valueOf("false"));
     userId =
     cronapi.database.Operations.getField(
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select \n	u \nfrom \n	User u  \nwhere \n	u.normalizedUserName = :normalizedUserName"),Var.valueOf("normalizedUserName",
