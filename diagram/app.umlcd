@@ -972,7 +972,8 @@
         "id:java.lang.String",
         "suggestionId:java.lang.String",
         "userId:java.lang.String",
-        "text:java.lang.String"
+        "text:java.lang.String",
+        "username:java.lang.String"
       ],
       "attrs": {
         ".": {
@@ -981,27 +982,27 @@
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 100,
+          "height": 120,
           "stroke": "#C2C2C2",
           "transform": "translate(0,40)"
         },
         ".uml-class-attrs-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* id\nsuggestionId\nuserId\ntext\n"
+          "text": "* id\nsuggestionId\nuserId\ntext\nusername\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
           "ref-x": 165,
-          "text": "Texto\nTexto\nTexto\nTexto\n"
+          "text": "Texto\nTexto\nTexto\nTexto\nTexto\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
           "height": 20,
           "stroke": "#C2C2C2",
           "stroke-width": 1,
-          "transform": "translate(0,140)"
+          "transform": "translate(0,160)"
         },
         ".uml-class-methods-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -1165,6 +1166,42 @@
           "isIndex": false,
           "useOuterJoin": false,
           "regionAWS": ""
+        },
+        {
+          "name": "username",
+          "type": "java.lang.String",
+          "dbName": "username",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Username",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         }
       ],
       "generateView": "Auto",
@@ -1183,7 +1220,7 @@
       "role": "Class",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
-        "height": 140,
+        "height": 150,
         "width": 204
       },
       "swagger": false,
@@ -2591,7 +2628,8 @@
         "text:java.lang.String",
         "genre:java.lang.String",
         "dateTime:java.sql.Date",
-        "userId:java.lang.String"
+        "userId:java.lang.String",
+        "username:java.lang.String"
       ],
       "attrs": {
         ".": {
@@ -2600,27 +2638,27 @@
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 140,
+          "height": 160,
           "stroke": "#C2C2C2",
           "transform": "translate(0,40)"
         },
         ".uml-class-attrs-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* id\nsuggestionName\ntext\ngenre\ndateTime\nuserId\n"
+          "text": "* id\nsuggestionName\ntext\ngenre\ndateTime\nuserId\nusername\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
           "ref-x": 135,
-          "text": "Texto\nTexto\nTexto\nTexto\nData e Hora\nTexto\n"
+          "text": "Texto\nTexto\nTexto\nTexto\nData e Hora\nTexto\nTexto\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
           "height": 20,
           "stroke": "#C2C2C2",
           "stroke-width": 1,
-          "transform": "translate(0,180)"
+          "transform": "translate(0,200)"
         },
         ".uml-class-methods-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -2856,6 +2894,42 @@
           "isIndex": false,
           "useOuterJoin": false,
           "regionAWS": ""
+        },
+        {
+          "name": "username",
+          "type": "java.lang.String",
+          "dbName": "username",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Username",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         }
       ],
       "generateView": "Auto",
@@ -2865,8 +2939,8 @@
       "modelType": "Table",
       "name": "Suggestion",
       "position": {
-        "x": 432,
-        "y": 160
+        "x": 442,
+        "y": 150
       },
       "queries": [],
       "realName": "",
@@ -2874,7 +2948,7 @@
       "role": "Class",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
-        "height": 160,
+        "height": 170,
         "width": 210
       },
       "swagger": false,
@@ -5334,20 +5408,6 @@
       ],
       "groupPositions": [
         {
-          "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
-          "position": {
-            "x": 452,
-            "y": 432
-          }
-        },
-        {
-          "idCell": "90dcfd7a-b75c-468e-b9d7-9b20ddd1e5b6",
-          "position": {
-            "x": 432,
-            "y": 160
-          }
-        },
-        {
           "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
           "position": {
             "x": 986,
@@ -5355,10 +5415,24 @@
           }
         },
         {
+          "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
+          "position": {
+            "x": 452,
+            "y": 432
+          }
+        },
+        {
           "idCell": "64d403e5-c641-42f0-aa62-4ff1a9d01e90",
           "position": {
             "x": 331,
             "y": 471
+          }
+        },
+        {
+          "idCell": "90dcfd7a-b75c-468e-b9d7-9b20ddd1e5b6",
+          "position": {
+            "x": 442,
+            "y": 150
           }
         }
       ]
@@ -5390,27 +5464,6 @@
       ],
       "groupPositions": [
         {
-          "idCell": "1ec6293b-1b11-4bbd-9b22-cb612a4de6ea",
-          "position": {
-            "x": 148,
-            "y": 306
-          }
-        },
-        {
-          "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
-          "position": {
-            "x": 382,
-            "y": 36
-          }
-        },
-        {
-          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
-          "position": {
-            "x": 1106,
-            "y": 406
-          }
-        },
-        {
           "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
           "position": {
             "x": 984,
@@ -5418,24 +5471,17 @@
           }
         },
         {
-          "idCell": "4672fdd4-f95c-4c22-ace3-d2be8feed77d",
+          "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
           "position": {
-            "x": 154,
-            "y": 68
+            "x": 452,
+            "y": 432
           }
         },
         {
-          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
           "position": {
-            "x": 668,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-          "position": {
-            "x": 404,
-            "y": 342
+            "x": 1106,
+            "y": 406
           }
         },
         {
@@ -5453,31 +5499,17 @@
           }
         },
         {
-          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
+          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
           "position": {
-            "x": 144,
-            "y": 530
+            "x": 940,
+            "y": 594
           }
         },
         {
-          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
+          "idCell": "1ec6293b-1b11-4bbd-9b22-cb612a4de6ea",
           "position": {
-            "x": 100,
-            "y": 34
-          }
-        },
-        {
-          "idCell": "90dcfd7a-b75c-468e-b9d7-9b20ddd1e5b6",
-          "position": {
-            "x": 432,
-            "y": 160
-          }
-        },
-        {
-          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
-          "position": {
-            "x": 70,
-            "y": 240
+            "x": 148,
+            "y": 306
           }
         },
         {
@@ -5488,17 +5520,59 @@
           }
         },
         {
-          "idCell": "d0c4e30a-a882-4354-8ebd-7f9a2899d532",
+          "idCell": "4672fdd4-f95c-4c22-ace3-d2be8feed77d",
           "position": {
-            "x": 452,
-            "y": 432
+            "x": 154,
+            "y": 68
           }
         },
         {
-          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "idCell": "90dcfd7a-b75c-468e-b9d7-9b20ddd1e5b6",
           "position": {
-            "x": 940,
+            "x": 432,
+            "y": 160
+          }
+        },
+        {
+          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
+          "position": {
+            "x": 144,
+            "y": 530
+          }
+        },
+        {
+          "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
+          "position": {
+            "x": 382,
+            "y": 36
+          }
+        },
+        {
+          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "position": {
+            "x": 668,
             "y": 594
+          }
+        },
+        {
+          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
+          "position": {
+            "x": 100,
+            "y": 34
+          }
+        },
+        {
+          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
+          "position": {
+            "x": 404,
+            "y": 342
+          }
+        },
+        {
+          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
+          "position": {
+            "x": 70,
+            "y": 240
           }
         }
       ]

@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 10/11/2023, 13:20:20
+ * @since 10/11/2023, 14:13:41
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/ConsultaSeExisteSugestaoJaCriada:consultarSugestaoByName", method = RequestMethod.GET, consumes = "*/*")
@@ -47,13 +47,13 @@ public static Var consultarSugestaoByName() throws Exception {
         cronapi.screen.Operations.getValueOfField(
         Var.valueOf("Suggestion.active.text"))),Var.valueOf("userId",
         cronapi.screen.Operations.getValueOfField(
-        Var.valueOf("Suggestion.active.userId"))));
-        cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.openUrl"),
-        Var.valueOf(
-        cronapi.util.Operations.getBaseUrl().getObjectAsString() +
-        Var.valueOf("#/home").getObjectAsString()), Var.VAR_NULL,
-        Var.VAR_NULL,
-        Var.VAR_NULL);
+        Var.valueOf("Suggestion.active.userId"))),Var.valueOf("username",
+        cronapi.screen.Operations.getValueOfField(
+        Var.valueOf("Suggestion.active.username"))));
+        cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.disableComponent"),
+        Var.valueOf("btn_crud_post_41813"));
+        cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
+        Var.valueOf("Tudo certo! Sua sugestão foi cadastrada no sistema!"));
     } else {
         suggestionId =
         cronapi.database.Operations.getField(existeSugestao,
@@ -63,14 +63,16 @@ public static Var consultarSugestaoByName() throws Exception {
         cronapi.screen.Operations.getValueOfField(
         Var.valueOf("Suggestion.active.text"))),Var.valueOf("userId",
         cronapi.screen.Operations.getValueOfField(
-        Var.valueOf("Suggestion.active.userId"))));
+        Var.valueOf("Suggestion.active.userId"))),Var.valueOf("username",
+        cronapi.screen.Operations.getValueOfField(
+        Var.valueOf("Suggestion.active.username"))));
         cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("warning"),
         Var.valueOf("Já existe sugestão cadastrada com o mesmo nome, foi feito um comentário"));
         cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.openUrl"),
         Var.valueOf(
         cronapi.util.Operations.getBaseUrl().getObjectAsString() +
         Var.valueOf("#/home/logged/comment?suggestionId=").getObjectAsString() +
-        cronapi.database.Operations.getField(existeSugestao, suggestionId).getObjectAsString()), Var.VAR_NULL,
+        suggestionId.getObjectAsString()), Var.VAR_NULL,
         Var.VAR_NULL,
         Var.VAR_NULL);
     }

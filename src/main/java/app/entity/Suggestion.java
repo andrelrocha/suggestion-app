@@ -79,6 +79,14 @@ public class Suggestion implements Serializable {
 
 
     /**
+    * @generated
+    */
+    @Column(name = "username", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String username;
+
+
+    /**
     * Construtor
     * @generated
     */
@@ -191,6 +199,24 @@ public class Suggestion implements Serializable {
     */
     public Suggestion setUserId(java.lang.String userId) {
         this.userId = userId;
+        return this;
+    }
+    /**
+    * Obtém username
+    * return username
+    * @generated
+    */
+    public java.lang.String getUsername() {
+        return this.username;
+    }
+
+    /**
+    * Define username
+    * @param username username
+    * @generated
+    */
+    public Suggestion setUsername(java.lang.String username) {
+        this.username = username;
         return this;
     }
 

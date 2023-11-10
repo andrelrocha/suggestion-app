@@ -60,6 +60,14 @@ public class Comment implements Serializable {
 
 
     /**
+    * @generated
+    */
+    @Column(name = "username", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String username;
+
+
+    /**
     * Construtor
     * @generated
     */
@@ -136,6 +144,24 @@ public class Comment implements Serializable {
     */
     public Comment setText(java.lang.String text) {
         this.text = text;
+        return this;
+    }
+    /**
+    * Obtém username
+    * return username
+    * @generated
+    */
+    public java.lang.String getUsername() {
+        return this.username;
+    }
+
+    /**
+    * Define username
+    * @param username username
+    * @generated
+    */
+    public Comment setUsername(java.lang.String username) {
+        this.username = username;
         return this;
     }
 
