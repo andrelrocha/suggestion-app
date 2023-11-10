@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 10/11/2023, 12:52:47
+ * @since 10/11/2023, 13:20:20
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/ConsultaSeExisteSugestaoJaCriada:consultarSugestaoByName", method = RequestMethod.GET, consumes = "*/*")
@@ -26,6 +26,8 @@ public static Var consultarSugestaoByName() throws Exception {
    private Var suggestionName = Var.VAR_NULL;
    private Var existeSugestao = Var.VAR_NULL;
    private Var novaSugestao = Var.VAR_NULL;
+   private Var suggestionId = Var.VAR_NULL;
+   private Var novoComentario = Var.VAR_NULL;
 
    public Var call() throws Exception {
     suggestionName =
@@ -53,14 +55,22 @@ public static Var consultarSugestaoByName() throws Exception {
         Var.VAR_NULL,
         Var.VAR_NULL);
     } else {
-        cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("error"),
-        Var.valueOf("Já existe sugestão cadastrada com o mesmo nome, favor fazer um comentário"));
+        suggestionId =
+        cronapi.database.Operations.getField(existeSugestao,
+        Var.valueOf("this[0].id"));
+        novoComentario =
+        cronapi.database.Operations.insert(Var.valueOf("app.entity.Comment"),Var.valueOf("suggestionId",suggestionId),Var.valueOf("text",
+        cronapi.screen.Operations.getValueOfField(
+        Var.valueOf("Suggestion.active.text"))),Var.valueOf("userId",
+        cronapi.screen.Operations.getValueOfField(
+        Var.valueOf("Suggestion.active.userId"))));
+        cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("warning"),
+        Var.valueOf("Já existe sugestão cadastrada com o mesmo nome, foi feito um comentário"));
         cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.openUrl"),
         Var.valueOf(
         cronapi.util.Operations.getBaseUrl().getObjectAsString() +
         Var.valueOf("#/home/logged/comment?suggestionId=").getObjectAsString() +
-        cronapi.database.Operations.getField(existeSugestao,
-        Var.valueOf("this[0].id")).getObjectAsString()), Var.VAR_NULL,
+        cronapi.database.Operations.getField(existeSugestao, suggestionId).getObjectAsString()), Var.VAR_NULL,
         Var.VAR_NULL,
         Var.VAR_NULL);
     }

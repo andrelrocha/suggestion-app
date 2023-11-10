@@ -1,0 +1,160 @@
+{
+  "customId": "buscaComentariosSugestao",
+  "queryName": "buscar comentários por sugestão",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Comment",
+  "entityFullName": "app.entity.Comment",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Comment",
+        "namespace": "app.entity.Comment",
+        "dataSourceOptions": {
+          "id": "app.Comment",
+          "customId": "Comment",
+          "customQueryName": "app.Comment",
+          "paramValues": [],
+          "entityFullName": "app.entity.Comment",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "suggestionId",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "userId",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "text",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "key": true
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "Comment",
+          "fullName": "app.entity.Comment",
+          "labelName": "app.entity.Comment (Comment)"
+        },
+        "alias": "c"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "c",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "c.suggestionId",
+          "field": "c.suggestionId",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":suggestionId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "suggestionId",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "suggestionId": null,
+    "userId": null,
+    "text": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "suggestionId": null,
+    "userId": null,
+    "text": null
+  },
+  "security": {
+    "id": null,
+    "suggestionId": null,
+    "userId": null,
+    "text": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query354598/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}
