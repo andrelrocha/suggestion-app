@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Andre Lucio Rocha Wanderley
- * @since 10/11/2023, 14:13:41
+ * @since 10/11/2023, 15:22:22
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/ConsultaSeExisteSugestaoJaCriada:consultarSugestaoByName", method = RequestMethod.GET, consumes = "*/*")
@@ -37,6 +37,7 @@ public static Var consultarSugestaoByName() throws Exception {
     cronapi.database.Operations.query(Var.valueOf("app.entity.Suggestion"),Var.valueOf("select \n	s \nfrom \n	Suggestion s  \nwhere \n	s.suggestionName = :suggestionName"),Var.valueOf("suggestionName",suggestionName));
     if (
     cronapi.logic.Operations.isNullOrEmpty(existeSugestao).getObjectAsBoolean()) {
+        cronapi.database.Operations.beginTransaction(Var.VAR_NULL);
         novaSugestao =
         cronapi.database.Operations.insert(Var.valueOf("app.entity.Suggestion"),Var.valueOf("dateTime",
         cronapi.dateTime.Operations.getNow()),Var.valueOf("genre",
@@ -50,6 +51,7 @@ public static Var consultarSugestaoByName() throws Exception {
         Var.valueOf("Suggestion.active.userId"))),Var.valueOf("username",
         cronapi.screen.Operations.getValueOfField(
         Var.valueOf("Suggestion.active.username"))));
+        cronapi.database.Operations.commitTransaction(Var.VAR_NULL);
         cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.disableComponent"),
         Var.valueOf("btn_crud_post_41813"));
         cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
@@ -58,6 +60,7 @@ public static Var consultarSugestaoByName() throws Exception {
         suggestionId =
         cronapi.database.Operations.getField(existeSugestao,
         Var.valueOf("this[0].id"));
+        cronapi.database.Operations.beginTransaction(Var.VAR_NULL);
         novoComentario =
         cronapi.database.Operations.insert(Var.valueOf("app.entity.Comment"),Var.valueOf("suggestionId",suggestionId),Var.valueOf("text",
         cronapi.screen.Operations.getValueOfField(
@@ -66,6 +69,7 @@ public static Var consultarSugestaoByName() throws Exception {
         Var.valueOf("Suggestion.active.userId"))),Var.valueOf("username",
         cronapi.screen.Operations.getValueOfField(
         Var.valueOf("Suggestion.active.username"))));
+        cronapi.database.Operations.commitTransaction(Var.VAR_NULL);
         cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("warning"),
         Var.valueOf("Já existe sugestão cadastrada com o mesmo nome, foi feito um comentário"));
         cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.openUrl"),
